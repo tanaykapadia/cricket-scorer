@@ -13,6 +13,10 @@ buttons.forEach(function(button){
         const styles=e.currentTarget.classList;
         if (styles.contains("decrease")) {
             countScore--;
+        } else if (styles.contains("minusOut")) {
+            countWicket--;
+        } else if (styles.contains("minusBall")) {
+            countOvers--;
         } else if (styles.contains("single")) {
             if (countOvers<18 && countOvers>=12) {
                 countScore = countScore + 2;
